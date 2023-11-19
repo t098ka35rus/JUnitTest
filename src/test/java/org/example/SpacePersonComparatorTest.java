@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class SpacePersonComparatorTest {
 
     SpacePersonComparator spacePersonComparator = new SpacePersonComparator();
-    ;
 
 
     @DisplayName("compare test")
@@ -41,11 +40,8 @@ class SpacePersonComparatorTest {
     @Test
     void getSumS() {
         //input
-        String inputstring = null;
         //actual
-        assertThrows(NullPointerException.class, () -> {
-            spacePersonComparator.getSumS(null);
-        });
+        assertThrows(NullPointerException.class, () -> spacePersonComparator.getSumS(null));
     }
 
 
