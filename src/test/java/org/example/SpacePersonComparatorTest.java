@@ -1,6 +1,5 @@
 package org.example;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -9,12 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class SpacePersonComparatorTest {
 
-    SpacePersonComparator spacePersonComparator;
+    SpacePersonComparator spacePersonComparator = new SpacePersonComparator();
+    ;
 
-    @BeforeAll
-    void BeforAll() {
-        spacePersonComparator = new SpacePersonComparator();
-    }
 
     @DisplayName("compare test")
     @Test
@@ -25,8 +21,8 @@ class SpacePersonComparatorTest {
         //expected
         int expected = -1;
         //actual
-        spacePersonComparator.compare(person, person1);
-
+        int actual = spacePersonComparator.compare(person, person1);
+        assertEquals(expected, actual);
     }
 
     @DisplayName("countSLetters test")
